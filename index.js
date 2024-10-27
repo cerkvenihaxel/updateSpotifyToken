@@ -28,7 +28,6 @@ async function updateSpotifyToken() {
     });
 
     const accessToken = response.data.access_token;
-    console.log(response);
     const expirationDate = new Date(Date.now() + response.data.expires_in * 1000);
     const newRefreshToken = response.data.refresh_token; // Asegúrate de que el nuevo refresh_token esté en la respuesta
 
